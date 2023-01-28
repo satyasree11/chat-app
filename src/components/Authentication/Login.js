@@ -73,18 +73,20 @@ const Login = () => {
  
 
   return ( 
-  <VStack spacing="5px" color="black">
+  <VStack spacing="10px" >
     
-    <FormControl is="first-name" isRequired>
+    {/*<FormControl is="first-name" isRequired>
       <FormLabel>Name</FormLabel>
       <Input 
       placeholder=" Enter your name"
       onChange={(e)=>setName(e.target.value)}
       />
-    </FormControl>
+  </FormControl>*/}
     <FormControl id="email" isRequired>
       <FormLabel>Email</FormLabel>
       <Input 
+      value={email}
+      type="email"
       placeholder=" Enter your email"
       onChange={(e)=>setEmail(e.target.value)}
       />
@@ -93,6 +95,7 @@ const Login = () => {
       <FormLabel>Password</FormLabel>
       <InputGroup size="md">
       <Input 
+      value={password}
       type={show ? "text": "password"}
       placeholder=" Enter your password"
       onChange={(e)=>setPassword(e.target.value)}
